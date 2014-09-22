@@ -1,0 +1,127 @@
+// Prudhvi Raj Nemarugumulla
+// Assignment1: Testing Input data
+
+import java.util.Scanner;
+public class Project1
+    {
+    private static Scanner sc;
+
+	public static void main(String[] args) 
+       {
+        
+        sc = new Scanner(System.in);
+        int length,width,depth_shallow,depth_deep;
+        
+	// Testing Length of pool for Non Integers
+        System.out.print("Please enter Valid value for Length ");
+        while (!sc.hasNextInt() ) { 
+            System.out.println("Illegal Input Detected, Character type"); 
+            System.out.print("Enter Again");
+            sc.next(); // discard 
+        } 
+
+        length=sc.nextInt();
+
+        while (length<0)
+        {
+            System.out.print("Illegal Input Detected, Negative value");
+            System.out.print("Enter Again");
+            length=sc.nextInt();
+        }
+        while (length<=0)
+        {
+            System.out.print("Illegal Input Detected, Length Cannot be Zero");
+            System.out.print("Enter Again");
+            length=sc.nextInt();
+        }
+       
+	// Testing Width of pool for Non Integers;
+        System.out.print("Please enter Valid value for Width ");
+        while (!sc.hasNextInt() ) { 
+            System.out.println("Illegal Input Detected, Character type"); 
+            System.out.print("Enter Again");
+            sc.next(); // discard 
+        } 
+
+        width=sc.nextInt();
+
+        while (width<0)
+        {
+            System.out.print("Illegal Input Detected, Negative value");
+            System.out.print("Enter Again");
+            width=sc.nextInt();
+        }
+        while (width<=0)
+        {
+            System.out.print("Illegal Input Detected, Width Cannot be Zero");
+            System.out.print("Enter Again");
+            width=sc.nextInt();
+        }
+        
+     // Testing Depth of pool shallow end for Non Integers;
+       
+        System.out.print("Please enter Valid value for Depth shallow end ");
+        while (!sc.hasNextInt() ) { 
+            System.out.println("Illegal Input Detected, Character type"); 
+            System.out.print("Enter Again");
+            sc.next(); // discard 
+        } 
+
+        depth_shallow=sc.nextInt();
+
+        while (depth_shallow<0)
+        {
+            System.out.print("Illegal Input Detected, Negative value");
+            System.out.print("Enter Again");
+            depth_shallow=sc.nextInt();
+        }
+        while (depth_shallow<=0)
+        {
+            System.out.print("Illegal Input Detected, Width Cannot be Zero");
+            System.out.print("Enter Again");
+            depth_shallow=sc.nextInt();
+        }
+                
+	// Testing Depth of pool deep end for Non Integers;
+        
+        System.out.print("Please enter Valid value for Depth deep end ");
+        while (!sc.hasNextInt() ) { 
+            System.out.println("Illegal Input Detected, Character type"); 
+            System.out.print("Enter Again");
+            sc.next(); // discard 
+        } 
+
+        depth_deep=sc.nextInt();
+
+        while (depth_deep<0)
+        {
+            System.out.print("Illegal Input Detected, Negative value");
+            System.out.print("Enter Again");
+            depth_deep=sc.nextInt();
+        }
+        while (depth_deep<=0)
+        {
+            System.out.print("Illegal Input Detected, Width Cannot be Zero");
+            System.out.print("Enter Again");
+            depth_deep=sc.nextInt();
+        }
+                
+
+	System.out.println("Enter text string for customer name");
+	String name=(sc.next());
+	String regex = "^[a-zA-Z]+$";
+	if (name.matches(regex)) { 
+		System.out.println("Entered customer name is a Text string" + name);
+	}
+	else
+	{
+		System.out.println("Illegal Input detected for Customer name");
+	}
+	
+	System.out.println("\nLength of the pool in feet " + length);
+	System.out.println("\nWidth of the pool in feet " + width);
+	System.out.println("\nDepth of the pool at the shallow end in feet " + depth_shallow);
+	System.out.println("\nDepth of the pool at the deep end in feet " + depth_deep);
+	
+    }
+}
